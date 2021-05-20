@@ -9,8 +9,7 @@
     <%= f.input :description %>
     <%= f.input :price %>
     <%= f.input :publication_date %>
-    <%= f.input :date %>
-    <%= f.input :category %>
+    <%= f.input :category, collection: ["Arts", "Business", "Culture", "Food & Drink", "Health", "News", "Opinion", "Politics", "Science", "Sports", "Technology"] %>
     <%= f.input :article_rating %>
   </div>
 
