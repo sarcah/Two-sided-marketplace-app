@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 2021_05_20_082941) do
     t.text "description"
     t.integer "price"
     t.string "publication_date"
-    t.string "date"
     t.string "category"
     t.integer "article_rating"
     t.datetime "created_at", precision: 6, null: false

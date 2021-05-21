@@ -11,6 +11,8 @@
     <%= f.input :publication_date %>
     <%= f.input :category, collection: ["Arts", "Business", "Culture", "Food & Drink", "Health", "News", "Opinion", "Politics", "Science", "Sports", "Technology"] %>
     <%= f.input :article_rating %>
+    <%= f.file_field :image %>
+
   </div>
 
   <div class="form-actions">
