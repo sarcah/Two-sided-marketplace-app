@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'about/page'
   resources :articles
   devise_for :users, controllers: {
     sessions: 'users/sessions'
