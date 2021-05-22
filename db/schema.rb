@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2021_05_21_095622) do
   end
 
   create_table "articles", force: :cascade do |t|
-    t.string "title", null: false
+    t.string "title"
     t.string "author"
     t.text "description"
     t.integer "price"
