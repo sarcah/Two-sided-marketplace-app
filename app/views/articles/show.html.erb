@@ -45,5 +45,19 @@
   <%= image_tag @article.image %>
 </p>
 
+<%# Button to link to buy now for stripe payment %>
+<html>
+  <head>
+    <title>Buy article</title>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <button id="checkout-button">Buy Now</button>
+  </body>
+</html>
+
+<br><br>
 <%= link_to 'Edit', edit_article_path(@article) %> |
+
 <%= link_to 'Back', articles_path %>
+

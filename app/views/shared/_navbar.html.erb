@@ -23,7 +23,7 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       
       <% if user_signed_in? %>
-        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
       <% end %>
     </form>
   </div>
