@@ -31,13 +31,18 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= image_tag @article.image %>
+  <strong>User:</strong>
+  <%= @article.user.email %>
 </p>
 
 <p>
   <strong>Thumbnail:</strong>
   <%= image_tag @article.thumbnail %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @article.image %>
 </p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |

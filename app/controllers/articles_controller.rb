@@ -23,6 +23,8 @@ class ArticlesController < ApplicationController
   # POST /articles or /articles.json
   def create
     @article = Article.new(article_params)
+    @article.user_id = current_user.id
+    # @article.update_attribute (:user_id, current_user.id)
     respond_to do |format|
       
       if @article.save
@@ -34,6 +36,7 @@ class ArticlesController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
