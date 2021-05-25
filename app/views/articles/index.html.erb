@@ -28,8 +28,8 @@
         <td><%= article.publication_date %></td>
         <td><%= article.category %></td>
         <td><%= article.user_id %></td>
-        <td><%= image_tag article.thumbnail %></td>
-        <td><%= image_tag article.image %></td>
+        <td><%= image_tag article.thumbnail, class: 'thumbnail' %></td>
+        <td><%= image_tag article.image, class: 'image' %></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -8,7 +8,7 @@
     <%= f.input :author %>
     <%= f.input :description %>
     <%= f.input :price, collection: 1..1, prompt: "Price for articles is set", selected: 1 %>
-    <%= f.input :publication_date %>
+    <%= f.input :publication_date, as: :date, html5: true%>
     <%= f.input :category, collection: ["Arts", "Business", "Culture", "Food & Drink", "Health", "News", "Opinion", "Politics", "Science", "Sports", "Technology"] %>
     <%= f.file_field :image %>
     <%= f.file_field :thumbnail %>
