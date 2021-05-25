@@ -30,20 +30,17 @@
   <%= @article.category %>
 </p>
 
-<p>
+<%# <p>
   <strong>User:</strong>
   <%= @article.user.email %>
-</p>
+<%# </p> %> 
 
 <p>
   <strong>Thumbnail:</strong>
   <%= image_tag @article.thumbnail, class: 'thumbnail' %>
 </p>
 
-<%# <p>
-  <strong>Image:</strong>
-  <%= image_tag @article.image %>
-<%# </p>  %>
+
 
 <%# Button to link to buy now for stripe payment %>
 <button type="button" id="checkout-button">Checkout</button>

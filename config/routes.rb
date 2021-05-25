@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   
+  get 'item/page'
   get 'about/page'
   get '/search', to:"articles#search"
 
