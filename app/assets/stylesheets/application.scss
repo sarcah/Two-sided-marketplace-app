@@ -19,13 +19,14 @@
  .nav li {display: inline-block;}
 
 
-.image {
-    display: block;
-    width: 9rem;
-    height: 9rem;
-}
-
 .thumbnail {
     display: block;
     height: 9rem;
+    width: 9rem;
+}
+
+.card-img-top {
+    display: block;
+    height: 18rem;
+    width: 18rem;
 }

@@ -37,6 +37,16 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def search
+    if params[:query].blank?
+      @listings = nil
+    else
+        # Do a search based on "LIKE" parameters
+        @parameter = params[:query].downcase
+        @listings = Article.all.where("lower(title) LIKE :search OR lower(description) like :search OR lower(author) LIKE :search", search: "%#{@parameter}%")
+    end
+  end
+
 
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
