@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'home#page'
+  devise_for :users
+  
   get 'item/page'
   get 'about/page'
 
@@ -8,9 +9,6 @@ Rails.application.routes.draw do
   resources :transactions, only: [:create]
   get 'checkout/success', to: 'transactions#success'
 
-  devise_for :users, controllers: {
-    sessions: 'users/sessions'
-  }
-  
+  root 'home#page'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
