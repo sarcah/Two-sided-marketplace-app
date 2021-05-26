@@ -37,6 +37,7 @@ class ArticlesController < ApplicationController
     end
   end
 
+# Method for search bar function in nav bar
   def search
     if params[:query].blank?
       @listings = nil
@@ -47,12 +48,20 @@ class ArticlesController < ApplicationController
     end
   end
 
+  # Method for category search filter on home page
   def category
     if params[:id].blank?
       @listings = nil
     else
         # Do a search based on "LIKE" parameters
         @listings = Article.all.where(category_id: params[:id])
+    end
+  end
+
+  def portfolio
+    if user_signed_in?
+    @portfolio = Article.where(user_id: current_user.id)
+    else
     end
   end
 

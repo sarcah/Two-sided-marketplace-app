@@ -30,19 +30,10 @@
   <%= Category.find(@article.category_id).name %>
 </p>
 
-<%# <p>
-  <strong>User:</strong>
-  <%= @article.user.email %>
-<%# </p> %> 
-
 <p>
   <strong>Thumbnail:</strong>
   <%= image_tag @article.thumbnail, class: 'thumbnail' %>
 </p>
-
-
-
-
 
 
 <br><br>
