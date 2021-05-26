@@ -1,4 +1,4 @@
-class User::UserController < ApplicationController
+class Users::UsersController < ApplicationController
     before_action :set_user, only: %i[ show edit update destroy ]
   
     # GET /users or /users.json
