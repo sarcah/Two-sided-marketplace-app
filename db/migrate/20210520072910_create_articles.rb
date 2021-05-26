@@ -7,7 +7,7 @@ class CreateArticles < ActiveRecord::Migration[6.1]
       t.integer :price
       t.string :publication_date
       t.string :category
-      # t.integer :article_rating
+      t.integer :article_rating
 
       t.timestamps
     end
