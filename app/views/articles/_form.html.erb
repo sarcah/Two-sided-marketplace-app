@@ -9,7 +9,7 @@
     <%= f.input :description %>
     <%= f.input :price, collection: 1..1, prompt: "Price for articles is set", selected: 1 %>
     <%= f.input :publication_date, as: :date, html5: true%>
-    <%= f.input :category, collection: ["Arts", "Business", "Food & Drink", "Health", "News", "Opinion", "Politics", "Science", "Sports", "Technology", "Travel"] %>
+    <%= f.input :category_id, collection: Category.pluck(:name, :id) %>
     <%= f.label :thumbnail %>
     <%= f.file_field :thumbnail, accept: 'image/png, image/jpg, image/jpeg, image/webp' %>
     <%= f.label :image %>
@@ -19,6 +19,7 @@
   </div>
 
   <div class="form-actions">
+  <%= f.submit %>
   </div>
 <% end %>
 

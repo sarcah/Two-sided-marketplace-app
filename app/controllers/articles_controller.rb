@@ -47,6 +47,15 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def category
+    if params[:id].blank?
+      @listings = nil
+    else
+        # Do a search based on "LIKE" parameters
+        @listings = Article.all.where(category_id: params[:id])
+    end
+  end
+
 
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
@@ -78,7 +87,7 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title, :author, :description, :price, :publication_date, :category, :user_id, :thumbnail, :image)
+      params.require(:article).permit(:title, :author, :description, :price, :publication_date, :category_id, :user_id, :thumbnail, :image)
     end
 
 end

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'item/page'
   get 'about/page'
   get '/search', to:"articles#search"
+  get '/category/:id', to: "articles#category", as: "category"
 
   resources :users
   resources :articles
