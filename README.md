@@ -27,9 +27,11 @@ A company called Substack was founded in 2017, which allows journalists to creat
 #### R11 Description of site
 
 **Purpose**
+<br>
 The purpose of News Central is to connect buyers and sellers of articles by providing a user friendly marketplace where buyers are able to pick and choose what articles they read, rather than having to subscribe to multiple media organisations. Journalists are able to list their articles and sell their work directly to users, and create new revenue streams.
 
 **Functionality/Features**
+<br>
 *UX*: A clean, functional User Experience has been implemented throughout the marketplace with clear and simple design. Users are able to either search by keyword, browse by category, or browse overall articles. They can read the first paragraph of the article before deciding if they want to purchase. Users are able to access the articles by clicking the 'Start Reading' button on the homepage, which takes them to articles displayed in an easy to browse format. They can also access the full table of articles from the link in the navbar. 
 
 *Account*: The Devise Ruby gem has been implemented for authentication and authorisation. Users only have to create an account in order to upload an article - this is purposely done, to remove any barrier to purchase. A User does not have to be logged in to browse the site or buy an article. Once a user has signed up and created an account, they can write an article and access the article index (accessed from the navigation bar), where they will only be able to edit and delete articles they have created, and simply view all other articles.  
