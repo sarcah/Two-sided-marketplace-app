@@ -139,26 +139,36 @@ The controllers provided the site with functionality, allowing all data to be ac
 *Heroku* – used for deployment
 
 <br>
+
 #### R17 Models Used:
 
 **Articles, Categories, Transactions and User**.
 
 The **Article** model has the product_id as the primary key, and user_id, article_image and category_id as foreign keys (to note: images are not usually used as foreign keys, but must be in this instance because it is the digital download and forms the product being sold). The relationship is represented in the Article model as:
-```belongs_to :user```
+```
+belongs_to :user
+```
 
 The **Category** serves as a foreign key, and belongs to the Article. 
 
 The **Transaction** model belongs to the Article, and to the buyer and seller of the User. This is represented as:
-`belongs_to :seller`
-`belongs_to :buyer `
-`belongs_to :article`
+```
+
+belongs_to :seller
+belongs_to :buyer 
+belongs_to :article
+```
 
 A registered **User** can have many articles, though a listing can have only one user. This is represented in the User model as:
-`has_many :articles`
+```
+has_many :articles
+```
 
-The **User** also has foreign keys of buyer and seller, so can have many sales and purchases.
-`has_many :sales`
-`has_many :purchases`
+The **User** also has foreign keys of buyer and seller, so can have many sales and purchases:
+```
+has_many :sales
+has_many :purchases
+```
 
 <br>
 
