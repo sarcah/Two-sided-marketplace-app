@@ -1,7 +1,8 @@
 
   <p id="notice"><%= notice %></p>
 
-  <%# Table where users can see their own articles and edit, show or destroy %>
+  <%# Table where users can see their own articles and edit, show or destroy. %>
+  <%# Another user will see the page of articles with the 'Show' button only %>
   <h1>Articles</h1>
 
   <table class="table">
@@ -41,6 +42,7 @@
   </table>
 
   <br>
-
+  
+<%# Users are can link directly to creating a new article %>
   <%= link_to 'New Article', new_article_path %>
 

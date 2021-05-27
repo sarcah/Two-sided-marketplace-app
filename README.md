@@ -30,20 +30,22 @@ A company called Substack was founded in 2017, which allows journalists to creat
 The purpose of News Central is to connect buyers and sellers of articles by providing a user friendly marketplace where buyers are able to pick and choose what articles they read, rather than having to subscribe to multiple media organisations. Journalists are able to list their articles and sell their work directly to users, and create new revenue streams.
 
 **Functionality/Features**
-*UX*: A clean, functional User Experience has been implemented throughout the marketplace with clear and simple design. Users are able to either search by keyword, browse by category, or browse overall articles. They can read the first paragraph of the article before deciding if they want to purchase. The homepage contains a featured article to showcase the format, and to encourage users to click through to rest of site. 
+*UX*: A clean, functional User Experience has been implemented throughout the marketplace with clear and simple design. Users are able to either search by keyword, browse by category, or browse overall articles. They can read the first paragraph of the article before deciding if they want to purchase. Users are able to access the articles by clicking the 'Start Reading' button on the homepage, which takes them to articles displayed in an easy to browse format. They can also access the full table of articles from the link in the navbar. 
 
-*Account*: The Devise Ruby gem has been implemented for authentication and authorisation. Users will need to 'Sign Up' to create an account in order to access the article index, list their articles for sale and make any purchases. 
+*Account*: The Devise Ruby gem has been implemented for authentication and authorisation. Users only have to create an account in order to upload an article - this is purposely done, to remove any barrier to purchase. A User does not have to be logged in to browse the site or buy an article. Once a user has signed up and created an account, they can write an article and access the article index (accessed from the navigation bar), where they will only be able to edit and delete articles they have created, and simply view all other articles.  
 
-*Articles*: Once logged in, users can create, edit or delete an article. Note: for creation of an article, there is not nearly enough instructions to the user or restrictions on what can be entered, this would need to be improved on in the next round of coding for site.  
+*Articles*: There are two ways to access the Articles from the homepage. The link in the navbar takes the User to an article index (as mentioned above), and the Start Reading button takes them to a more more appealing article show page, where the articles are displayed in card format in order to encourage users to persuse the selection. The category buttons on the front page also allow users to quickly filter by category. The homepage also contains a featured article to showcase the format (that is selected at random each time the page is refreshed), and to encourage users to click through to rest of site. 
+Note: for creation of an article, there is not nearly enough instructions to the user or restrictions on what can be entered, this would need to be improved on in the next round of coding for site.  
 
-*Adding to cart*: Users can purchase article from the ‘show’ page, and be taken to stripe checkout. Upon completion of payment, they will receive an automatic download of article pdf.
+*Adding to cart*: Users can purchase article from the ‘show’ page, and be taken to stripe checkout. Upon completion of payment, they will receive an automatic download of article pdf. The checkout process currently ends there, but future iterations of the site would see users taken to a 'purchase successful' page.
 
 **Sitemap**
-PUT THIS IN!!!!!!
+![Sitemap](app/assets/images/readme/site_map.png)
 
 **Screenshots**
-Home screen
-![Home Screen screenshot](app/assets/images/readme/screenshot_home.png)
+
+Homepage 
+![Homepage screenshot](app/assets/images/readme/screenshot_home.png)
 
 Write an article
 ![Write an Article screenshot](app/assets/images/readme/screenshot_new.png)
@@ -84,8 +86,8 @@ The target audience for this app is readers who enjoy quality journalism, and wa
 •	As a user, I can search articles by keyword (searching by title and/or author).
 •	As a user, I can use buttons on home page to filter by author.
 •	As a user (seller), I have the ability to navigate from the homepage to create a listing to sell an article.
-•	As a user (seller), I have the ability edit my articles.
-•	As a user (seller), I have the ability delete my articles.
+•	As a user (seller), I alone have the ability edit my articles.
+•	As a user (seller), I alone have the ability delete my articles.
 
 **Transactions**
 •	As a user, I have the ability to buy an article, pay for it, and then receive a download as soon as payment goes through. 
@@ -117,10 +119,10 @@ Wireframes – read page
 #### R15 Explain the different high-level components (abstractions) in your app
 
 The app is built with a basic MVC, with the high level components of Articles, Categories, Users and Transactions. 
-Articles – the central proposition of the app. The article can be created, edited and deleted by a User, shown as for sale and bought. The product is entirely digital. The writer or journalists can spend months writing an article, and a minute to create the article on the webpage, given it a form that can be shared and purchased. The article should still be thought of as a physical item that can be described and browsed. The benefit of being a digital product, once the payment is processed and the article is downloaded, the transaction is complete, with immediate gratification to the customer. 
-Categories – these were created to ensure uniformity when uploading a new article, and also as a way of sorting the data and making it meaningful. Replicating the way a user would read a real life newspaper (where articles on similar topics are grouped together), these allows for ease of browsing and an easier path to purchase.
+**Articles** – the central proposition of the app. The article can be created, edited and deleted by a User, shown as for sale and bought. The product is entirely digital. The writer or journalists can spend months writing an article, and a minute to create the article on the webpage, given it a form that can be shared and purchased. The article should still be thought of as a physical item that can be described and browsed. The benefit of being a digital product, once the payment is processed and the article is downloaded, the transaction is complete, with immediate gratification to the customer. 
+**Categories** – these were created to ensure uniformity when uploading a new article, and also as a way of sorting the data and making it meaningful. Replicating the way a user would read a real life newspaper (where articles on similar topics are grouped together), these allows for ease of browsing and an easier path to purchase.
 Users – used for authentication and to create and purchase articles. Permission in the app vary based on user logged in, and allow users to interact with the application. They can be both buyers and sellers, both consumers and providers of content, or choose just to be a reader or a writer. 
-Transactions – the purpose of the app is to create new revenue for journalists, so the Transaction is the component where money changes hands and value is assigned to the content. As stated previously, this app aims to change the perception that news should be ‘free’, so the transaction is an important part of assigning inherent value to content.
+**Transactions** – the purpose of the app is to create new revenue for journalists, so the Transaction is the component where money changes hands and value is assigned to the content. As stated previously, this app aims to change the perception that news should be ‘free’, so the transaction is an important part of assigning inherent value to content.
 
 The controllers provided the site with functionality, allowing all data to be accessed and made meaningful. The views ensure the data and functions are presented to the user in a meaningful way that they can interact with it. Various pre-packaged gems ensure this app’s functionality runs smoothly, eases code creation and ensure the shopping experience is a smooth one for the consumer, allowing the app to achieve it’s central purpose of making money for writers. 
 
