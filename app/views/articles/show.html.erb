@@ -2,17 +2,17 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @article.title %>
+  <%= sanitize @article.title %>
 </p>
 
 <p>
   <strong>Author:</strong>
-  <%= @article.author %>
+  <%= sanitize @article.author %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @article.description %>
+  <%= sanitize @article.description %>
 </p>
 
 <p>
@@ -22,7 +22,7 @@
 
 <p>
   <strong>Publication date:</strong>
-  <%= @article.publication_date %>
+  <%= sanitize @article.publication_date %>
 </p>
 
 <p>

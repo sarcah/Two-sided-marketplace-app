@@ -1,25 +1,25 @@
 class Users::UsersController < ApplicationController
     before_action :set_user, only: %i[ show edit update destroy ]
   
-    # GET /users or /users.json
+    # list all users
     def index
       @users = User.all
     end
   
-    # GET /users/1 or /users/1.json
+    # show all users
     def show
     end
   
-    # GET /users/new
+    # create new user
     def new
       @user = User.new
     end
   
-    # GET /users/1/edit
+    # edit user
     def edit
     end
   
-    # POST /users or /users.json
+    # create new user
     def create
       @user = User.new(user_params)
   
@@ -34,7 +34,7 @@ class Users::UsersController < ApplicationController
       end
     end
   
-    # PATCH/PUT /users/1 or /users/1.json
+    # update user
     def update
       respond_to do |format|
         if @user.update(user_params)
@@ -47,7 +47,7 @@ class Users::UsersController < ApplicationController
       end
     end
   
-    # DELETE /users/1 or /users/1.json
+    # delete user
     def destroy
       @user.destroy
       respond_to do |format|

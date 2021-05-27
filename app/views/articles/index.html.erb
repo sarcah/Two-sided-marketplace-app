@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<%# Table where users can see their own articles and edit, show or destroy %>
 <h1>Articles</h1>
 
 <table class="table">
@@ -13,7 +14,6 @@
       <th>Category</th>
       <th>User</th>
       <th>Thumbnail</th>
-      <%# <th>Image</th> %>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,15 +21,14 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-        <td><%= article.title %></td>
-        <td><%= article.author %></td>
-        <td><%= article.description %></td>
+        <td><%= sanitize article.title %></td>
+        <td><%= sanitize article.author %></td>
+        <td><%= sanitize article.description %></td>
         <td><%= article.price %></td>
-        <td><%= article.publication_date %></td>
+        <td><%= sanitize article.publication_date %></td>
         <td><%= article.category_id %></td>
         <td><%= article.user_id %></td>
         <td><%= image_tag article.thumbnail, class: 'thumbnail' %></td>
-        <%# <td><%= image_tag article.image, class: 'image' %>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>

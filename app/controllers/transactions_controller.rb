@@ -1,4 +1,6 @@
 class TransactionsController < ApplicationController
+    
+# Use of stripe to create transaction    
     def create
         article = Article.find params["id"]
         session = Stripe::Checkout::Session.create({

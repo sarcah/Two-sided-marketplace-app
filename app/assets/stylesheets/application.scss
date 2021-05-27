@@ -16,13 +16,15 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
  
-
+// Styling to ensure thumbnail is displayed as square when displayed in 
+// index to ensure image size consistency throughout site
 .thumbnail {
     display: block;
     height: 9rem;
     width: 9rem;
 }
 
+// Styling to ensure thumbnail is displayed as square to fit with card design
 .card-img-top {
     display: block;
     height: 18rem;
