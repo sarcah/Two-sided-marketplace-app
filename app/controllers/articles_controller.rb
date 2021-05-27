@@ -16,7 +16,6 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
@@ -32,8 +31,6 @@ class ArticlesController < ApplicationController
       end
     end
   end
-
-
 
 # Method for search bar function in nav bar
   def search

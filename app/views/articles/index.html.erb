@@ -1,42 +1,46 @@
-<p id="notice"><%= notice %></p>
 
-<%# Table where users can see their own articles and edit, show or destroy %>
-<h1>Articles</h1>
+  <p id="notice"><%= notice %></p>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Publication date</th>
-      <th>Category</th>
-      <th>User</th>
-      <th>Thumbnail</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <%# Table where users can see their own articles and edit, show or destroy %>
+  <h1>Articles</h1>
 
-  <tbody>
-    <% @articles.each do |article| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= sanitize article.title %></td>
-        <td><%= sanitize article.author %></td>
-        <td><%= sanitize article.description %></td>
-        <td><%= article.price %></td>
-        <td><%= sanitize article.publication_date %></td>
-        <td><%= article.category_id %></td>
-        <td><%= article.user_id %></td>
-        <td><%= image_tag article.thumbnail, class: 'thumbnail' %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Publication date</th>
+        <th>Category</th>
+        <th>User</th>
+        <th>Thumbnail</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= sanitize article.title %></td>
+          <td><%= sanitize article.author %></td>
+          <td><%= sanitize article.description %></td>
+          <td><%= article.price %></td>
+          <td><%= sanitize article.publication_date %></td>
+          <td><%= article.category_id %></td>
+          <td><%= article.user_id %></td>
+          <td><%= image_tag article.thumbnail, class: 'thumbnail' %></td>
+          <td><%= link_to 'Show', article %></td>
+            <% if current_user == article.user %>
+              <td><%= link_to 'Edit', edit_article_path(article) %></td>
+              <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %> 
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Article', new_article_path %>
+  <br>
+
+  <%= link_to 'New Article', new_article_path %>
+
