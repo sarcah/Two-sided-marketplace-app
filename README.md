@@ -12,7 +12,7 @@ Link to github: https://github.com/sarcah/meme_store_app1
 
 #### R7 and R8. What problem does it solve, and why is it a problem?
 
-In recent years, the way people consume news has changed drastically. Customers can now consume news either online or through physical means, paid or free, from news websites or through social media. More and more established news organisations are moving to make their content only accessible through paid subscriptions. This can get expensive for customers who are large consumers of news, or who like to read work from particular journalists who work at different media organisations. 
+In recent years, the way people consume news has changed drastically. Customers can now access news either online or through physical means, paid or free, from news websites or through social media. More and more established news organisations are moving to make their content only accessible through paid subscriptions. This can get expensive for customers who are large consumers of news, or who like to read work from particular journalists who work at different media organisations. 
 
 This app would allow a large marketplace or library of articles that users could browse, and simply pay for the articles they want to read for a small fee per article, providing another option rather than having to subscribe to multiple news organisations. The fee is purposely set low to make the barrier to purchase low – the model aims to make multiple purchases easy, attractive and low risk to the consumer. 
 
@@ -76,21 +76,21 @@ The target audience for this app is readers who enjoy quality journalism, and wa
 #### R12 User Stores
 
 **Authentication**
-•	As a user, I have the ability to sign up for an account to login.
-•	As a user, I can use my email and password to log in to the app.
-•	As a user, I can log out of my account at any point.
-•	As a user, I can browse articles to read but must log in to be able to write an article.
+* As a user, I have the ability to sign up for an account to login.
+* As a user, I can use my email and password to log in to the app.
+* As a user, I can log out of my account at any point.
+* As a user, I can browse articles to read but must log in to be able to write an article.
 
 **Article Listings**
-•	As a user, I can navigate from the homepage to browse articles.
-•	As a user, I can search articles by keyword (searching by title and/or author).
-•	As a user, I can use buttons on home page to filter by author.
-•	As a user (seller), I have the ability to navigate from the homepage to create a listing to sell an article.
-•	As a user (seller), I alone have the ability edit my articles.
-•	As a user (seller), I alone have the ability delete my articles.
+* As a user, I can navigate from the homepage to browse articles.
+* As a user, I can search articles by keyword (searching by title and/or author).
+* As a user, I can use buttons on home page to filter by author.
+* As a user (seller), I have the ability to navigate from the homepage to create a listing to sell an article.
+* As a user (seller), I alone have the ability edit my articles.
+* As a user (seller), I alone have the ability delete my articles.
 
 **Transactions**
-•	As a user, I have the ability to buy an article, pay for it, and then receive a download as soon as payment goes through. 
+* As a user, I have the ability to buy an article, pay for it, and then receive a download as soon as payment goes through. 
 
 <br>
 
