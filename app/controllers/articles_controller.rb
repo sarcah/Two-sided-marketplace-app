@@ -2,25 +2,21 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, only: %i[ new create edit update destroy ]
   
-  # GET /articles or /articles.json
+# Shows all articles in database, allowing user to edit, show and destroy
   def index
     @articles = Article.all.order(:created_at).reverse_order
   end
 
-  # GET /articles/1 or /articles/1.json
+# Shows article with price and checkout button
   def show
   end
 
-  # GET /articles/new
+# Below two methods create a new article. All fields must be filled in to be able to submit.
   def new
     @article = Article.new
   end
 
-  # GET /articles/1/edit
-  def edit
-  end
 
-  # POST /articles or /articles.json
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
@@ -37,6 +33,8 @@ class ArticlesController < ApplicationController
     end
   end
 
+
+
 # Method for search bar function in nav bar
   def search
     if params[:query].blank?
@@ -48,7 +46,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # Method for category search filter on home page
+# Method for category search filter on home page
   def category
     if params[:id].blank?
       @listings = nil
@@ -58,6 +56,7 @@ class ArticlesController < ApplicationController
     end
   end
 
+# Method for allowing only user to see the index display of articles
   def portfolio
     if user_signed_in?
     @portfolio = Article.where(user_id: current_user.id)
@@ -65,8 +64,10 @@ class ArticlesController < ApplicationController
     end
   end
 
+# Below two methods allow owner of the listing is able to edit/update their article
+  def edit
+  end
 
-  # PATCH/PUT /articles/1 or /articles/1.json
   def update
     respond_to do |format|
       if @article.update(article_params)
@@ -79,7 +80,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # DELETE /articles/1 or /articles/1.json
+# Allows owner of listing to delete their article
   def destroy
     @article.destroy
     respond_to do |format|
@@ -88,13 +89,13 @@ class ArticlesController < ApplicationController
     end
   end
 
+# Requires users to log in when creating new article
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
+# Determines what is required when entering a new article
     def article_params
       params.require(:article).permit(:title, :author, :description, :price, :publication_date, :category_id, :user_id, :thumbnail, :image)
     end
