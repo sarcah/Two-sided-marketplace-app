@@ -5,14 +5,12 @@
 ![News Central logo](app/assets/images/logo2.png)
 
 Link to website: https://newscentral1.herokuapp.com/ 
+<br>
 Link to github: https://github.com/sarcah/meme_store_app1 
 
-R7 and R8 
-Identification of the problem you are trying to solve by building this particular marketplace app. Why is it a problem that needs solving?
-
 <br>
-<span style="color:grey"> R7 and R8 
-Identification of the problem you are trying to solve by building this particular marketplace app. Why is it a problem that needs solving? </span>
+
+#### R7 and R8. What problem does it solve, and why is it a problem?
 
 In recent years, the way people consume news has changed drastically. Customers can now consume news either online or through physical means, paid or free, from news websites or through social media. More and more established news organisations are moving to make their content only accessible through paid subscriptions. This can get expensive for customers who are large consumers of news, or who like to read work from particular journalists who work at different media organisations. 
 
@@ -25,7 +23,8 @@ Ideally, this app would also employ fact checkers before articles were posted to
 A company called Substack was founded in 2017, which allows journalists to create paid newsletters that customers can subscribe to, which does solve some of the above problems. However this does mean that customers can get multiple emails and does not allow them to ‘pick and choose’ which articles they would like to read as News Central does.
 
 <br>
-<span style="color:grey">R11 Description of your marketplace app (website)</span>
+
+#### R11 Description of site
 
 **Purpose**
 The purpose of News Central is to connect buyers and sellers of articles by providing a user friendly marketplace where buyers are able to pick and choose what articles they read, rather than having to subscribe to multiple media organisations. Journalists are able to list their articles and sell their work directly to users, and create new revenue streams.
@@ -71,7 +70,8 @@ The target audience for this app is readers who enjoy quality journalism, and wa
 *Deployment*: Heroku
 
 <br>
-<span style="color:grey">R12 User Stores</span>
+
+#### R12 User Stores
 
 **Authentication**
 •	As a user, I have the ability to sign up for an account to login.
@@ -91,7 +91,9 @@ The target audience for this app is readers who enjoy quality journalism, and wa
 •	As a user, I have the ability to buy an article, pay for it, and then receive a download as soon as payment goes through. 
 
 <br>
-<span style="color:grey">R13 Wireframes</span>
+
+#### R13 Wireframes
+
 Wireframes – home page
 
 ![Wireframes home page](app/assets/images/readme/wireframes_home.png)
@@ -105,12 +107,14 @@ Wireframes – read page
 ![Wireframes read page](app/assets/images/readme/wireframes_read.png)
 
 <br>
-<span style="color:grey">R14 ERD</span>
+
+#### R14 ERD
 
 ![ERD](app/assets/images/readme/ERD.png)
 
 <br>
-<span style="color:grey">R15 Explain the different high-level components (abstractions) in your app</span>
+
+#### R15 Explain the different high-level components (abstractions) in your app
 
 The app is built with a basic MVC, with the high level components of Articles, Categories, Users and Transactions. 
 Articles – the central proposition of the app. The article can be created, edited and deleted by a User, shown as for sale and bought. The product is entirely digital. The writer or journalists can spend months writing an article, and a minute to create the article on the webpage, given it a form that can be shared and purchased. The article should still be thought of as a physical item that can be described and browsed. The benefit of being a digital product, once the payment is processed and the article is downloaded, the transaction is complete, with immediate gratification to the customer. 
@@ -121,7 +125,8 @@ Transactions – the purpose of the app is to create new revenue for journalists
 The controllers provided the site with functionality, allowing all data to be accessed and made meaningful. The views ensure the data and functions are presented to the user in a meaningful way that they can interact with it. Various pre-packaged gems ensure this app’s functionality runs smoothly, eases code creation and ensure the shopping experience is a smooth one for the consumer, allowing the app to achieve it’s central purpose of making money for writers. 
 
 <br>
-<span style="color:grey">R16 Detail any third party services that your app will use</span>
+
+#### R16 Third party services
 
 *Bootstrap*: the bootstrap styling framework was used for ease of design and consistency.
 *Simple form*: being utilised throughout the application for handling all required form fields.
@@ -132,7 +137,7 @@ The controllers provided the site with functionality, allowing all data to be ac
 *Heroku* – used for deployment
 
 <br>
-<span style="color:grey">R17 Models Used:</span>
+#### R17 Models Used:
 
 **Articles, Categories, Transactions and User**.
 
@@ -154,7 +159,10 @@ The **User** also has foreign keys of buyer and seller, so can have many sales a
 `has_many :purchases`
 
 <br>
-<span style="color:grey">R18 Discuss the database relations to be implemented in your application:</span>
+
+#### R18 Database relations
+
+
 The **User** model contains the primary key of user_id. This was initially created through the Devise gem, and then had a buyer and seller id created so the marketplace can be two sided. 
 
 ```
@@ -175,7 +183,8 @@ validates :image, :title, :author, :price, :description, presence: true
 ```
 
 <br>
-<span style="color:grey">R19 Provide your database schema design:</span>
+
+#### R19 Provide your database schema design:
 
 ```
 create_table "active_storage_attachments", force: :cascade do |t|
@@ -253,7 +262,8 @@ create_table "active_storage_attachments", force: :cascade do |t|
   ```
 
 <br>
-<span style="color:grey">R20 Describe the way tasks are allocated and tracked in your project:</span>
+
+#### R20 Tracking Tasks
 
 This project has been tracked and managed using Trello: https://trello.com/b/9y1AYpIL/t2a2-marketplace. 
 General cards were created with details and checklists inside each card, detailing the task that would need to be done, what tools were needed, and checklists ensuring all requirements were met. Stretch goals were put in Backlog. Colour coding was implemented for ease of use.
